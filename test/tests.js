@@ -162,3 +162,17 @@ test('dog LI test', (expect) => {
     const actual3 = renderDogLI({ name: 'Booper', age: 7 });
     expect.equal(actual3, expected3);
 });
+
+import { renderDogDiv } from '../functions.js';
+
+test('dog div test', (expect) => {
+    const expected = '<div><h1>Benny</h1><p>Benny is 6 years old</p></div>';
+    const actual = renderDogDiv({ name: 'Benny', age: 6 });
+    expect.equal(actual, expected);
+    const expected2 = '<div><h1>Lampshade</h1><p>Lampshade is 8 years old</p></div>';
+    const actual2 = renderDogDiv({ name: 'Lampshade', age: 8 });
+    expect.equal(actual2, expected2);
+    const expected3 = '<div><h1>Booper</h1><p>Booper is 7 years old</p></div>';
+    const actual3 = renderDogDiv({ name: 'Booper', age: 7 });
+    expect.equal(actual3, expected3);
+});
