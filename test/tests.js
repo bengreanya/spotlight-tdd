@@ -21,7 +21,7 @@ skip('this test should be skipped', (expect) => {
 
 import { addExclamationPoints } from '../functions.js';
 
-test('this is the first test', (expect) => {
+test('exclamationTest', (expect) => {
     const expected = 'bunny rabbit!!!';
     const actual = addExclamationPoints('bunny rabbit');
     expect.equal(actual, expected);
@@ -37,7 +37,8 @@ test('this is the first test', (expect) => {
 import { multiplyBySeven } from '../functions.js';
 
 // run test
-test('this is the second test', (expect) => {
+
+test('mult7test', (expect) => {
     const expected = 28;
     const actual = multiplyBySeven(4);
     expect.equal(actual, expected);
@@ -48,19 +49,31 @@ test('this is the second test', (expect) => {
     const actual3 = multiplyBySeven(4519);
     expect.equal(actual3, expected3);
 });
+import { multiplyBy12ThenHalve } from '../functions.js';
+test('multiplyBy12ThenHalve', (expect) => {
+    const expected = 24;
+    const actual = multiplyBy12ThenHalve(4);
+    expect.equal(actual, expected);
+    const expected2 = 48;
+    const actual2 = multiplyBy12ThenHalve(8);
+    expect.equal(actual2, expected2);
+    const expected3 = 96;
+    const actual3 = multiplyBy12ThenHalve(16);
+    expect.equal(actual3, expected3);
+});
 
 // import function
-import { multiplyBy12ThenHalve } from '../functions.js';
+import { divideThenMultiply } from '../functions.js';
 
 // run test
-test('this is the third test', (expect) => {
+test('divideThenMultTest', (expect) => {
     const expected = 10;
-    const actual = multiplyBy12ThenHalve(8, 4, 5);
+    const actual = divideThenMultiply(8, 4, 5);
     expect.equal(actual, expected);
     const expected2 = 12;
-    const actual2 = multiplyBy12ThenHalve(10, 5, 6);
+    const actual2 = divideThenMultiply(10, 5, 6);
     expect.equal(actual2, expected2);
     const expected3 = 672;
-    const actual3 = multiplyBy12ThenHalve(7872, 82, 7);
+    const actual3 = divideThenMultiply(7872, 82, 7);
     expect.equal(actual3, expected3);
 });
