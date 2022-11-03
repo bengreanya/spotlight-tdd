@@ -146,7 +146,7 @@ Output:
 */
 
 export function getLastItem(array) {
-    return array[-1];
+    return array[array.length - 1];
 }
 
 // This function should take a dog object and return an <li> with the name of the dog
@@ -162,7 +162,7 @@ Output:
 */
 
 export function renderDogLI(dog) {
-    return true;
+    return '<li>' + dog.name + '</li>';
 }
 
 // This function should take a dog object and return a div with the dog's information

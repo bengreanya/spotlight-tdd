@@ -135,9 +135,10 @@ test('get second item', (expect) => {
 import { getLastItem } from '../functions.js';
 
 test('get last item', (expect) => {
-    const expected = 'plum';
+    const plum = 'plum';
+    const expected = plum;
     const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
-    expect.equal(expected, actual);
+    expect.deepEqual(expected, actual);
 
     const expected2 = 'a billion';
     const actual2 = getLastItem([3, 8, 34, 'a billion']);
@@ -146,4 +147,18 @@ test('get last item', (expect) => {
     const expected3 = true;
     const actual3 = getLastItem([12, 5, 7, true]);
     expect.equal(expected3, actual3);
+});
+
+import { renderDogLI } from '../functions.js';
+
+test('dog LI test', (expect) => {
+    const expected = '<li>Benny</li>';
+    const actual = renderDogLI({ name: 'Benny', age: 6 });
+    expect.equal(actual, expected);
+    const expected2 = '<li>Lampshade</li>';
+    const actual2 = renderDogLI({ name: 'Lampshade', age: 8 });
+    expect.equal(actual2, expected2);
+    const expected3 = '<li>Booper</li>';
+    const actual3 = renderDogLI({ name: 'Booper', age: 7 });
+    expect.equal(actual3, expected3);
 });
