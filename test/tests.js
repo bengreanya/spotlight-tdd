@@ -119,15 +119,15 @@ test('return as string test', (expect) => {
 import { makeLuckyGreeting } from '../functions.js';
 
 test('return lucky number', (expect) => {
-    const expected = 'Hello! Your lucky number for the day is 84.';
+    const expected = 'Hello! Your lucky number for the day is 12.';
     const actual = makeLuckyGreeting(8, 4);
     expect.equal(expected, actual);
 
-    const expected2 = 'Hello! Your lucky number for the day is 38.';
+    const expected2 = 'Hello! Your lucky number for the day is 11.';
     const actual2 = makeLuckyGreeting(3, 8);
     expect.equal(expected2, actual2);
 
-    const expected3 = 'Hello! Your lucky number for the day is -24.';
-    const actual3 = makeLuckyGreeting(-2, 4);
+    const expected3 = 'Hello! Your lucky number for the day is -4.';
+    const actual3 = makeLuckyGreeting(-8, 4);
     expect.equal(expected3, actual3);
 });
