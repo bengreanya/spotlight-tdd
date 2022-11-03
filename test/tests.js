@@ -26,3 +26,13 @@ test('this is the first test', (expect) => {
     const actual = addExclamationPoints('bunny rabbit');
     expect.equal(actual, expected);
 });
+
+// import function
+import { multiplyBySeven } from '../functions.js';
+
+// run test
+test('this is the second test', (expect) => {
+    const expected = 28;
+    const actual = multiplyBySeven(4);
+    expect.equal(actual, expected);
+});
