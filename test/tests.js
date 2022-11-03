@@ -18,3 +18,11 @@ skip('this test should be skipped', (expect) => {
 
     expect.equal(actual, expected);
 });
+
+import { addExclamationPoints } from '../functions.js';
+
+test('this is the first test', (expect) => {
+    const expected = 'bunny rabbit!!!';
+    const actual = addExclamationPoints('bunny rabbit');
+    expect.equal(actual, expected);
+});
