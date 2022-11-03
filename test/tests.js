@@ -99,3 +99,19 @@ test('return as array test', (expect) => {
     const actual3 = returnAsAnArray(-2, 4, 2000);
     expect.deepEqual(expected3, actual3);
 });
+
+import { returnAsAString } from '../functions.js';
+
+test('return as string test', (expect) => {
+    const expected = '845';
+    const actual = returnAsAString(8, 4, 5);
+    expect.deepEqual(expected, actual);
+
+    const expected2 = '3822';
+    const actual2 = returnAsAString(3, 8, 22);
+    expect.deepEqual(expected2, actual2);
+
+    const expected3 = '-242000';
+    const actual3 = returnAsAString(-2, 4, 2000);
+    expect.deepEqual(expected3, actual3);
+});
