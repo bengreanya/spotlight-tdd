@@ -25,6 +25,12 @@ test('this is the first test', (expect) => {
     const expected = 'bunny rabbit!!!';
     const actual = addExclamationPoints('bunny rabbit');
     expect.equal(actual, expected);
+    const expected2 = 'frogs!!!';
+    const actual2 = addExclamationPoints('frogs');
+    expect.equal(actual2, expected2);
+    const expected3 = "the brown fox jumped over the i don't remember!!!";
+    const actual3 = addExclamationPoints("the brown fox jumped over the i don't remember");
+    expect.equal(actual3, expected3);
 });
 
 // import function
