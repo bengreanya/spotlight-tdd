@@ -131,3 +131,19 @@ test('get second item', (expect) => {
     const actual3 = getSecondItem([12, 5, 7, true]);
     expect.equal(expected3, actual3);
 });
+
+import { getLastItem } from '../functions.js';
+
+test('get last item', (expect) => {
+    const expected = 'plum';
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+    expect.equal(expected, actual);
+
+    const expected2 = 'a billion';
+    const actual2 = getLastItem([3, 8, 34, 'a billion']);
+    expect.equal(expected2, actual2);
+
+    const expected3 = true;
+    const actual3 = getLastItem([12, 5, 7, true]);
+    expect.equal(expected3, actual3);
+});
