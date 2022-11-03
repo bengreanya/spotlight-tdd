@@ -53,7 +53,7 @@ test('this is the second test', (expect) => {
 import { multiplyBy12ThenHalve } from '../functions.js';
 
 // run test
-test('this is the second test', (expect) => {
+test('this is the third test', (expect) => {
     const expected = 10;
     const actual = multiplyBy12ThenHalve(8, 4, 5);
     expect.equal(actual, expected);
