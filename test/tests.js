@@ -105,13 +105,29 @@ import { returnAsAString } from '../functions.js';
 test('return as string test', (expect) => {
     const expected = '845';
     const actual = returnAsAString(8, 4, 5);
-    expect.deepEqual(expected, actual);
+    expect.equal(expected, actual);
 
     const expected2 = '3822';
     const actual2 = returnAsAString(3, 8, 22);
-    expect.deepEqual(expected2, actual2);
+    expect.equal(expected2, actual2);
 
     const expected3 = '-242000';
     const actual3 = returnAsAString(-2, 4, 2000);
-    expect.deepEqual(expected3, actual3);
+    expect.equal(expected3, actual3);
+});
+
+import { makeLuckyGreeting } from '../functions.js';
+
+test('return lucky number', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 84.';
+    const actual = makeLuckyGreeting(8, 4);
+    expect.equal(expected, actual);
+
+    const expected2 = 'Hello! Your lucky number for the day is 38.';
+    const actual2 = makeLuckyGreeting(3, 8);
+    expect.equal(expected2, actual2);
+
+    const expected3 = 'Hello! Your lucky number for the day is -24.';
+    const actual3 = makeLuckyGreeting(-2, 4);
+    expect.equal(expected3, actual3);
 });
