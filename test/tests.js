@@ -116,18 +116,18 @@ test('return as string test', (expect) => {
     expect.equal(expected3, actual3);
 });
 
-import { makeLuckyGreeting } from '../functions.js';
+import { getSecondItem } from '../functions.js';
 
-test('return lucky number', (expect) => {
-    const expected = 'Hello! Your lucky number for the day is 12.';
-    const actual = makeLuckyGreeting(8, 4);
+test('get second item', (expect) => {
+    const expected = 'apple';
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
     expect.equal(expected, actual);
 
-    const expected2 = 'Hello! Your lucky number for the day is 11.';
-    const actual2 = makeLuckyGreeting(3, 8);
+    const expected2 = 8;
+    const actual2 = getSecondItem([3, 8, 34, 'a billion']);
     expect.equal(expected2, actual2);
 
-    const expected3 = 'Hello! Your lucky number for the day is -4.';
-    const actual3 = makeLuckyGreeting(-8, 4);
+    const expected3 = 5;
+    const actual3 = getSecondItem([12, 5, 7, true]);
     expect.equal(expected3, actual3);
 });
