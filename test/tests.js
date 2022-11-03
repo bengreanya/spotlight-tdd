@@ -35,4 +35,11 @@ test('this is the second test', (expect) => {
     const expected = 28;
     const actual = multiplyBySeven(4);
     expect.equal(actual, expected);
+
+    const expected2 = 21;
+    const actual2 = multiplyBySeven(3);
+    expect.equal(actual2, expected2);
+    const expected3 = 31633;
+    const actual3 = multiplyBySeven(4519);
+    expect.equal(actual3, expected3);
 });
